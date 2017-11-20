@@ -1,2 +1,6 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+<h1>New Game</h1>
+<ul>
+  <% @letters.each do |l| %>
+  <li><%= l %></li>
+  <% end %>
+</ul>
