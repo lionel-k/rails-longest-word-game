@@ -13,12 +13,12 @@ class GamesController < ApplicationController
       url = "https://wagon-dictionary.herokuapp.com/#{@guess}"
       result = JSON.parse(open(url).read)
       if result["found"]
-        @message = "Congrats. #{@guess} is a valid word."
+        @message = "Congrats. <strong>#{@guess}</strong> is a valid word."
       else
-        @message = "Sorry but #{@guess} does not seem to be a valid English word."
+        @message = "Sorry but <strong>#{@guess}</strong> does not seem to be a valid English word."
       end
     else
-      @message = "Sorry. #{@guess} can not be built out of #{@grid.split('').join(", ")}."
+      @message = "Sorry. <strong>#{@guess}</strong> can not be built out of #{@grid.split('').join(", ")}."
     end
   end
 
